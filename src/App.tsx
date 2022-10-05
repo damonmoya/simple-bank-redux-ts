@@ -14,10 +14,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{amount}</h1>
-      <button onClick={() => depositMoney(1000)}>Deposit</button>
-      <button onClick={() => withdrawMoney(1000)}>Withdraw</button>
-      <button onClick={() => bankrupt()}>Bankrupt</button>
+      <div className="container">
+        <h1>Bank Account</h1>
+        <h3>Balance : {amount}$</h3>
+        <div className="row">
+          <div className="col-md-12">            
+            <button className="btn btn-primary m-2" onClick={() => depositMoney(1000)}>Deposit</button>
+            <button className="btn btn-warning m-2" onClick={() => withdrawMoney(1000)}>Withdraw</button>
+            <button className="btn btn-danger m-2" onClick={() => bankrupt()}>Bankrupt</button>
+          </div>
+        </div>
+        
+      </div>
     </div>
   );
 }
